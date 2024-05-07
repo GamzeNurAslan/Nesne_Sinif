@@ -1,0 +1,27 @@
+Class dizileri;
+ÖRNEK=>10 kişilik siniftaki ogrencilerin asagidaki bilgileri class dizisi seklinde tutulmak isteniyor.Bu islemi gerceklestiren kodu yaziniz.(ad_soyad,numara,yas)->3 tane class dizisi
+class ogrenci{
+public int yas;
+public int numara;
+public String ad_soyad;}
+public class A{
+public static void main(String [] args){
+ogrenci sinif [] = new ogrenci [10]; //Tanimlama  //Modelleme
+Scanner k = new Scanner(System.in);
+for(int i=0;i<10;i++){
+sinif[i] = new ogrenci(); //Yer Actik
+
+sinif[i].yas = k.nextInt();
+sinif[i].numara = k.nextInt();
+sinif[i].ad_soyad = k.nextLine();
+}
+}
+}
+//UML class diyagrami
+ _________________________
+|______<ogrenci>__________|
+|     +yas(int)           |
+|                         |
+|    +ad_soyad(String)    |
+|                         |
+|______+numara(int)_______|
