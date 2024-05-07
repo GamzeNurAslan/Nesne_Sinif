@@ -1,0 +1,18 @@
+class Matematik{
+public void topla(){  //parametresiz constructor
+int t = 5;      int y = 6;
+System.out.println(t+y);
+}
+public void topla(int x){  //tek parametreli constructor
+System.out.println(x+10);
+}
+public void topla(int x,int y){  //İki parametreli constructor
+System.out.println(x+y);
+}
+public static void main(String [] args){
+Matematik x = new Matematik();
+x.topla();
+x.topla(8);
+x.topla(10,27);
+}
+}
