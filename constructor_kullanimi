@@ -16,3 +16,8 @@ x.topla(8);
 x.topla(10,27);
 }
 }
+/*Tasarlanan sınıftan nesne üretilmesi anında çalışan metoddur. Yani bir nesne oluşturduğumuzda ilk olarak Constructor Method çalışır.
+Nesneleri sınıflardan ürettiğimize göre bu yapının sınıf içerisinde olduğunu tahmin edebiliriz.
+Dolayısıyla, her sınıfta mutlaka bir Constructor bulunduğunu söyleyebiliriz.
+Ayrıca Constructor, nesne oluşturmak için kullanıldığından dolayı böyle bir isme sahiptir.
+Constructor kelimesinin Türkçe karşılıklarına baktığımızda inşaatçı, yapıcı, yapılandırıcı gibi anlamlarına gelir*/
