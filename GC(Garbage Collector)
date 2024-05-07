@@ -1,0 +1,18 @@
+/*GC(Garbage Collection) => Sadece javada vardır.Bir kod içinde kullanılmayan değişkenler,kullanılmayan yapıların hafızayı işgal etmemesi için çıkarılması işlemidir.Değişkenlerin hafızada tutulduğu 
+bölgeye Heap adı verilir.Bu Heap kısmının gereksiz işgal edilmesi istenmez.Hafızadan çıkarma işlemi Javada belli bir sayıda çalışmadan sonra çöp olmak şartıyla gerçekleştirilir.Bu işlemi kontrollü
+bir şekilde yapmak için "System.gc();"  metodu kullanılır.
+Class içinde finalize() metodu tanımlanabilir,tanımlanmazsa yine de çöpler atılır.*/
+public class GarbageCollectionExample {
+    public static void main(String[] args) {
+        // Boş bir dizi oluşturalım
+        int[] numbers = new int[1000000];
+        
+        // Diziyi null olarak ayarlayalım
+        numbers = null;
+        
+        // Garbage Collector'u çağıralım
+        System.gc();
+    }
+}
+/*Bu örnekte, GarbageCollectionExample sınıfı içinde main metodu kullanılarak bir dizi oluşturuluyor ve sonra bu dizi null olarak ayarlanıyor.
+Artık bu diziye erişilemediği için Garbage Collector'ün bu diziyi yok etmesi gerektiği anlamına gelir. System.gc() metodu, Garbage Collector'ü çağırarak bu süreci tetikler.*/
