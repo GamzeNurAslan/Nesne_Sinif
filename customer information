@@ -1,0 +1,31 @@
+public class Customer {
+    public String name;
+    public String email;
+    public String phoneNumber;
+
+    public Customer(String name, String email, String phoneNumber) {
+        this.name = name;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+    }
+
+    // toString metodu
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                '}';
+    }
+
+    public static void main(String[] args) {
+        // Bir müşteri örneği oluştur
+        Customer customer1 = new Customer("Gamze Nur Aslan", "gamze@example.com", "+1234567890");
+
+        // Müşteri bilgilerini yazdır
+        System.out.println("Müşteri Bilgileri:");
+        System.out.println(customer1);
+    }
+}
+/*_Müşteri bilgilerinin ekrana Getter-Setter kullanmadan yazılması_*/
