@@ -1,0 +1,80 @@
+class User{
+    private String name;
+    private String country;
+    private int age;
+    
+    public User(String name, String country, int age) { //Constructor
+        this.name = name;
+        this.country = country;
+        this.age = age;
+    }
+    
+    public void showUserInfo(){ //Bilgileri Göster
+        System.out.println("Kullanıcı Adı : "+this.name);
+        System.out.println("Kullanıcı Ülke : "+this.country);
+        System.out.println("Kullanıcı Yaşı : "+this.age);
+    }
+}
+
+class PremiumUser extends User{ //User sınıfından türedi
+
+    private double premiumPrice;
+    
+    //PremiumUser Constructor;
+    public PremiumUser(String name, String country, int age, double premiumPrice) {
+        super(name, country, age); //User Constructor
+        this.premiumPrice = premiumPrice; 
+    }
+
+    @Override
+    public void showUserInfo() {
+        super.showUserInfo();
+        System.out.println("Yıllık Ödenen Ücret : "+this.premiumPrice+"TL");
+    }
+    
+    public void calculatePriceAfterCoupon(String coupon){
+        if(coupon.equals("C8T9A1")){
+            System.out.println("İndirim sonucu ödenecek olan ücret : "+250.99+"TL");
+        }
+        else if(coupon.equals("A9V8E3")){
+            System.out.println("İndirim sonucu ödenecek olan ücret : "+344.99+"TL");
+        }
+        else{ //Geçersiz kupon
+            System.out.println("Geçersiz kupon girdiniz.");
+            System.out.println("İndirim sonucu ödenecek olan ücret : "+599.99+"TL");
+        }
+    }
+    
+}
+
+class NormalUser extends User{ //User sınıfından türedi
+
+    public NormalUser(String name, String country, int age) {
+        super(name, country, age);
+    }
+
+    @Override
+    public void showUserInfo() {
+        super.showUserInfo();
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        
+        PremiumUser premiumUser = new PremiumUser("Kullanıcı245", "Türkiye", 23, 599.99);
+        NormalUser normalUser = new NormalUser("User245", "England", 22);
+        
+        premiumUser.calculatePriceAfterCoupon("A9V8E3");
+        System.out.println(" ");
+        premiumUser.showUserInfo();
+        System.out.println(" ");
+        
+        normalUser.showUserInfo();
+    } 
+}
+/*Projede, bir sosyal medya uygulamasındaki kullanıcının profil sayfası üzerine kullanıcı bilgilerini yerleştirmek istiyoruz 
+(Şimdilik bu işlemleri sadece ekrana bastırma olarak gerçekleştireceğiz. Ancak gerçekten bir web sitesi veya mobil uygulama geliştirirken de nesne kullanma mantığı örnekteki gibi olacaktır. 
+Veri tabanından nesne verileri çekilir ve nesnelerin özellikleri ekrana yerleştirilir). Uygulamada kullanıcılar, reklam görmek istemeyerek yıllık para ödeyebilir 
+veya uygulamayı ücretsiz kullanmaya devam ederek reklam izlemeyi tercih edebilir. Bu sebeple “Premium Kullanıcı” ve “Normal Kullanıcı” olmak üzere iki farklı kullanıcı tipi bulunsun. 
+Her iki kullanıcı türü de kullanıcı adı, yaşadığı ülke ve yaş özelliklerine sahip olsun. */
