@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+// Otobüs Kartı sınıfı
+class BusCard {
+    private String ownerName;
+    private double balance;
+
+    public BusCard(String ownerName, double initialBalance) {
+        this.ownerName = ownerName;
+        this.balance = initialBalance;
+    }
+
+    // Kart bakiyesini kontrol etme metodu
+    public double checkBalance() {
+        return balance;
+    }
+
+    // Karttan ücreti düşme metodu
+    public void deductFare(double fare) {
+        if (balance >= fare) {
+            balance -= fare;
+            System.out.println("Ücret başarıyla düşüldü. Yeni bakiye: " + balance);
+        } else {
+            System.out.println("Yetersiz bakiye. Lütfen kartınıza para yükleyin.");
+        }
+    }
+}
+
+// Ana sınıf
+public class Dosyalar {
+    public static void main(String[] args) {
+        Scanner k = new Scanner(System.in);
+
+        // Kullanıcıdan kart sahibinin adını ve başlangıç bakiyesini al
+        System.out.print("Kart sahibinin adını girin: ");
+        String ownerName = k.nextLine();
+        System.out.print("Başlangıç bakiyesini girin: ");
+        double initialBalance = k.nextDouble();
+
+        // Otobüs kartı oluştur
+        BusCard busCard = new BusCard(ownerName, initialBalance);
+
+        // Kart bakiyesini göster
+        System.out.println("Kart başarıyla oluşturuldu.");
+        System.out.println("Mevcut bakiye: " + busCard.checkBalance());
+
+        // Otobüse binme simülasyonu
+        System.out.print("Ödenecek ücreti girin: ");
+        double fare = k.nextDouble();
+
+        // Ücreti karttan düşme
+        busCard.deductFare(fare);
+
+        k.close();
+    }
+}
