@@ -1,0 +1,17 @@
+public class Ogr{
+  public int no;
+  public String isim;
+public Dosyalar(int no){
+  this(no,"Gamze Nur Aslan");
+}
+  public Dosyalar(int no, String isim){
+    this.no = no; //this.no dışarıdaki , yani Ogrenci nesnesinin değişkeni olan değişkeni ifade eder. no ise arguman olarak alınan yerel değişkeni.
+    this.isim = isim; //this.isim dışarıdaki , yani Ogrenci nesnesinin değişkeni olan değişkeni ifade eder. isim ise arguman olarak alınan yerel değişkeni.
+  }
+  public static void main(String args[]){
+    Ogr ogr1 = new Ogr(1,"Hayal Bulut");
+    System.out.println(ogr1.no + " numaralı öğrenci: " + ogr1.isim );
+    Ogr ogr2 = new Ogr(2);
+    System.out.println(ogr2.no + " numaralı öğrenci: " + ogr2.isim );
+  }
+}
