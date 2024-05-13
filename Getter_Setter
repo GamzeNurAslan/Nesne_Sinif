@@ -1,0 +1,63 @@
+//Getter kullanımı
+public class AA{
+private int sayfaSayisi;
+private String kitapAdi,yazar;
+AA(String kitapAdi,int sayfaSayisi,String yazar){
+this.kitapAdi=kitapAdi;
+this.yazar=yazar;
+if(sayfaSayisi<1){
+this.sayfaSayisi=10;
+}else{
+this.sayfaSayisi=sayfaSayisi;
+}
+}
+public int getSayfaSayisi(){
+return this.sayfaSayisi;
+}
+}
+//Setter kullanımı
+public class AA{
+private int sayfaSayisi;
+private String kitapAdi,yazar;
+AA(String kitapAdi,int sayfaSayisi,String yazar){
+this.kitapAdi=kitapAdi;
+this.yazar=yazar;
+if(sayfaSayisi<1){
+this.sayfaSayisi=10;
+}else{
+this.sayfaSayisi=sayfaSayisi;
+}
+}
+public int getSayfaSayisi(){
+return this.sayfaSayisi;
+}
+public void setSayfaSayisi(int sayfaSayisi){
+this.sayfaSayisi=sayfaSayisi;
+}
+}
+//sorunu yok et!
+public class AA{
+private int sayfaSayisi;
+private String kitapAdi,yazar;
+AA(String kitapAdi,int sayfaSayisi,String yazar){
+this.kitapAdi=kitapAdi;
+this.yazar=yazar;
+if(sayfaSayisi<1){
+this.sayfaSayisi=10;
+}else{
+this.sayfaSayisi=sayfaSayisi;
+}
+}
+public int getSayfaSayisi(){
+return this.sayfaSayisi;
+}
+public void setSayfaSayisi(int sayfaSayisi){
+if(sayfaSayisi<1){
+this.sayfaSayisi=10;
+}else{
+this.sayfaSayisi=sayfaSayisi;
+}
+}
+}
+//Getter => Geriye değer döndürebilir
+//Setter => Geriye değer döndüremez 
