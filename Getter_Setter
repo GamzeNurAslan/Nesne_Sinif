@@ -61,3 +61,4 @@ this.sayfaSayisi=sayfaSayisi;
 }
 //Getter => Geriye değer döndürebilir
 //Setter => Geriye değer döndüremez 
+/*Bir sınıfa ait private değişkenlere dışarıdan erişebilmek için (her bir değişkene) Getter metodu yazmalıyız.Bir sınıfa ait private bir değişkenin değerini deiştirmek için Setter metodu yazmalıyız.*/
