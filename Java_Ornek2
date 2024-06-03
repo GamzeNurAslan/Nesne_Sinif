@@ -1,0 +1,32 @@
+public class ExampleJava{
+private double yarıcap;
+//private double alan;
+//private double cevre;
+
+public ExampleJava(){
+yarıcap = 3.0;
+}
+public ExampleJava(double r){
+yarıcap = r;
+}
+public double getYarıcap(){
+return yarıcap;
+}
+public double getArea(){
+return yarıcap*yarıcap*Math.PI;
+}
+public double getCevre(){
+return 2*Math.PI*yarıcap;
+}
+public static void main(String [] args){
+ExampleJava g1 = new ExampleJava();
+    System.out.println("The circle has yarıcap of "+g1.getYarıcap()+" and area of "+g1.getArea());
+    
+ExampleJava g2 = new ExampleJava();
+    System.out.println("The circle has yarıcap of "+g2.getYarıcap()+" and area of "+g2.getCevre());
+}
+}
+/*Output;
+The circle has yarıcap of 3.0 and area of 28.274333882308138
+The circle has yarıcap of 3.0 and area of 18.84955592153876
+*/
