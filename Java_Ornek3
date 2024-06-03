@@ -1,0 +1,27 @@
+public class ExampleJava{
+private double length;
+private double width;
+      public ExampleJava(){
+      length = 5.2;
+      width = 4;
+      }
+     public double getLength(){
+     return length;
+     }
+     public double getWidth(){
+     return width;
+     }
+     public double getArea(){
+     return length*width;
+     }
+     public double getCircle(){
+     return (2*length)+(2*width);
+     }
+     public static void main(String [] args){
+     ExampleJava n1 = new ExampleJava();
+         System.out.println("Dikdörtgenin alanı : "+n1.getArea()+"\nDikdörtgenin çevresi : "+n1.getCircle());
+     }
+}
+/*Output:
+Dikdörtgenin alanı : 20.8
+Dikdörtgenin çevresi : 18.4*/
