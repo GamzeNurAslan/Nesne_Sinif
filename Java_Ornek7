@@ -1,0 +1,38 @@
+public class ExampleJava{
+private int gun;
+private int ay;
+private int yil;
+public ExampleJava(int gun,int ay,int yil){
+this.gun=gun;
+this.ay=ay;
+this.yil=yil;
+}
+public int getGun(){
+return gun;
+}
+public void setGun(int gun){
+this.gun = gun;
+}
+public int getAy(){
+return ay;
+}
+public void setAy(int ay){
+this.ay = ay;
+}
+public int getYil(){
+return yil;
+}
+public void setYil(int yil){
+this.yil = yil;
+}
+public String toString() {
+    return gun+"/"+ay+"/"+yil;
+}
+public static void main(String [] args){
+ExampleJava takvim = new ExampleJava(28,02,2024);
+    System.out.println("Gün:"+takvim.gun);
+    System.out.println("Ay:"+takvim.ay);
+    System.out.println("Yıl:"+takvim.yil);
+    System.out.println(takvim);
+}
+}
