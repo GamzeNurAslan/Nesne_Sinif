@@ -1,0 +1,56 @@
+public class ExampleJava{
+private double toplamBakiye;
+private double cekilecekTutar;
+private double eklenecekTutar;
+private final String isim;
+private int sifre;
+public ExampleJava(int sifre,String isim,double toplamBakiye,double cekilecekTutar,double eklenecekTutar){
+this.toplamBakiye=toplamBakiye;
+this.cekilecekTutar=cekilecekTutar;
+this.eklenecekTutar=eklenecekTutar;
+this.isim=isim;
+this.sifre=sifre;
+}
+public int getSifre(){
+return sifre;
+}
+public void setSifre(int sifre){
+this.sifre = sifre;
+}
+public double getCekTutar(){
+return cekilecekTutar;
+}
+public void setCekTutar(double cekilecekTutar){
+this.cekilecekTutar = cekilecekTutar;
+}
+public double getEkTutar(){
+return eklenecekTutar;
+}
+public void setEkTutar(double eklenecekTutar){
+this.eklenecekTutar = eklenecekTutar;
+}
+public double getTopBakiye(){
+return toplamBakiye;
+}
+public void setTopBakiye(double toplamBakiye){
+this.toplamBakiye = toplamBakiye;
+}
+public double toplamIslem() {
+    return (toplamBakiye + eklenecekTutar) - cekilecekTutar;
+}
+
+public String toString() {
+    return "Hesap{" + "isim='" + isim + '\'' + ", sifre=" + sifre + ", toplamBakiye=" + toplamBakiye + ", cekilecekTutar=" + cekilecekTutar + ", eklenecekTutar=" + eklenecekTutar + '}';
+}
+public static void main(String[] args) {
+    ExampleJava hesap = new ExampleJava(1234, "Gamze Aslan", 3000, 0, 0);
+    System.out.println(hesap);
+    hesap.setCekTutar(500);
+    hesap.setEkTutar(1000);
+    System.out.println("Yeni Bakiye: " + hesap.toplamIslem());
+}
+}
+/*Output:
+Hesap{isim='Gamze Aslan', sifre=1234, toplamBakiye=3000.0, cekilecekTutar=0.0, eklenecekTutar=0.0}
+Yeni Bakiye: 2510.0
+*/
