@@ -1,0 +1,46 @@
+public class ExampleJava{
+    private int id;
+    private String isim;
+    private double maas;
+
+    public ExampleJava(int id, String isim, double maas) {
+        this.id = id;
+        this.isim = isim;
+        this.maas = maas;
+    }
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+    public String getIsim() {
+        return isim;
+    }
+    public void setIsim(String isim) {
+        this.isim = isim;
+    }
+    public double getMaas() {
+        return maas;
+    }
+    public void setMaas(double maas) {
+        this.maas = maas;
+    }
+    public void raiseSalary(double percent) {
+        if (percent <= 0 || percent > 100) {
+            throw new IllegalArgumentException("Yüzde oranı 0 ile 100 arasında olmalıdır.");
+        }
+        double zamMiktari = maas * (percent / 100);
+        this.maas += zamMiktari;
+    }
+    @Override
+    public String toString() {
+        return "Çalışan{" + "id=" + id + ", isim='" + isim + '\'' + ", maas=" + maas + '}';
+}
+    public static void main(String[] args) {
+        ExampleJava employee = new ExampleJava(1, "Gamze Aslan", 5000);
+        System.out.println("Employee before raise: " + employee);
+        employee.raiseSalary(12);
+        System.out.println("Employee after raise: " + employee);
+    }
+}
