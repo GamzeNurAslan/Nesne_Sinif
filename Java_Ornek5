@@ -1,0 +1,49 @@
+public class ExampleJava{
+private int id;
+//private String acıklama;//Burada boyle yazmamamızın sebebi aciklama kavramini final kullanarak degismemesini saglamamizdir:)
+private int miktar;
+private double birimFiyat;
+    private final String aciklama;
+    private double toplam;
+     public ExampleJava(int id,String aciklama,int miktar,double birimFiyat,double toplam){
+     this.id = id;
+    this.aciklama = aciklama;
+    this.miktar=miktar;
+    this.birimFiyat=birimFiyat;
+    this.toplam = birimFiyat * miktar;
+     }
+public int getId(){
+return id;
+}
+public void setId(int id){
+this.id = id;
+}
+public String getAcıklama(){
+return aciklama;
+}
+public int getMiktar(){
+return miktar;
+}
+public void setMiktar(int miktar){
+this.miktar=miktar;
+}
+public double getbirimFiyat(){
+return birimFiyat;
+}
+public void setbirimFiyat(double birimFiyat){
+this.birimFiyat = birimFiyat;
+}
+public void setToplam() {
+    this.toplam = birimFiyat * miktar;
+}
+public String toString(){
+return "Ürün{" + "id=" + id + ", isim='" + aciklama + '\'' + ", miktar=" + miktar + " birimFiyat = " + birimFiyat + " toplam = " + toplam + '}';
+}
+public static void main(String [] args){
+ExampleJava urun = new ExampleJava(1,"Tükenmez Kalem",5,20.5,0);
+    System.out.println(urun);
+}
+}
+/*Output:
+Ürün{id=1, isim='Tükenmez Kalem', miktar=5 birimFiyat = 20.5 toplam = 102.5}
+*/
