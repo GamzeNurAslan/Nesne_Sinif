@@ -1,0 +1,52 @@
+public class ExampleJava{
+private final String isim;
+private final String e_mail;
+private int adet;
+private double fiyat;
+private int isbn;
+private String kitapAdi;
+
+public ExampleJava(String isim,String e_mail){
+this.isim = isim;
+this.e_mail = e_mail;
+}
+public ExampleJava(int isbn, String kitapAdi, String isim, String e_mail, double fiyat, int adet) {
+        this.isbn = isbn;
+        this.kitapAdi = kitapAdi;
+        this.isim = isim;
+        this.e_mail = e_mail;
+        this.fiyat = fiyat;
+        this.adet = adet;
+    }
+
+public int getAdet(){
+return adet;
+}
+
+public void setFiyat(int fiyat){
+this.fiyat = fiyat;
+}
+
+@Override
+public String toString() {
+    return "Yazar["+"isim="+isim+",email="+e_mail+"]" ;
+}
+
+public String toString2() {
+    return "Kitap["+"isbn="+isbn+",name="+kitapAdi+",Yazar["+"isim="+isim+",e_mail="+e_mail+",fiyat="+fiyat+",adet="+adet+"]";
+}
+
+public static void main(String [] args){
+ExampleJava writer = new ExampleJava("Gamze Aslan","gamze56@gmail.com");
+    System.out.println("İsmi = "+writer.isim);
+    System.out.println("E_mail = "+writer.e_mail);
+    System.out.println(writer);
+
+    ExampleJava book = new ExampleJava(1234,"Koca kafalar,çok bilmişler","Gamze Aslan","gamze56@gmail.com",90,5);
+    System.out.println(book);
+    System.out.println("isbn = "+book.isbn);
+    System.out.println("Kitap adı = "+book.kitapAdi);
+    System.out.println("Fiyat = "+book.fiyat);
+    System.out.println("Adet = "+book.adet);
+}
+}
