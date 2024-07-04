@@ -40,3 +40,12 @@ Employee emp = new Employee(1985,45,2000.0,"Gamze");
 emp.toString(emp);
 }   
 }
+
+-----------------------------------------------
+Output:                                        |
+Tax : 60.0                                     |
+Bonus : 150.0                                  |
+Increase salary : 300.0                        |
+total salary with tax and bonus : 2090.0       |
+total Salary with the raise of salary : 2300.0 |
+-----------------------------------------------
